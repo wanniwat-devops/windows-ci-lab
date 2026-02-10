@@ -1,0 +1,20 @@
+name: Windows CI Lab
+
+on: push
+
+jobs:
+  windows-ci:
+    runs-on: windows-latest
+
+    steps:
+      - name: Show disk and directory (CMD)
+        shell: cmd
+        run: |
+          C:
+          dir
+
+      - name: Show current path (PowerShell)
+        shell: powershell
+        run: |
+          Get-Location
+          Get-ChildItem
